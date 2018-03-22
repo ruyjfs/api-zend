@@ -22,6 +22,19 @@ composer require zendframework/zendframework
 composer create-project zendframework/zend-expressive-skeleton zend-api
 ```
 Chose All default options: 2, zend-servicemanager, FastRouter, n, Whoops
+```
+cd api-zend && php -S 0.0.0.0:80 -t public/ public/index.php
+```
+
+## GraphQL
+In container composer
+```
+composer require webonyx/graphql-php
+```
+
+To user GraphiQL
+Install [CHromeiQL](https://chrome.google.com/webstore/detail/chromeiql/fkkiamalmpiidkljmicmjfbieiclmeij)
+
 
 ### nginx
  ```
