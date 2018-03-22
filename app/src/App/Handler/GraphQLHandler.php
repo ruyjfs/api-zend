@@ -59,7 +59,7 @@ class GraphQLHandler implements RequestHandlerInterface
             $query = $input['query'];
             $variableValues = isset($input['variables']) ? $input['variables'] : null;
             $rootValue = ['prefix' => 'You said: '];
-            $result = GraphQL::executeQuery($schema, null, $rootValue, null, $variableValues);
+            $result = GraphQL::executeQuery($schema, $query, $rootValue, null, $variableValues);
             $output = $result->toArray();
             return new JsonResponse($output);
         } catch (\Exception $e) {
